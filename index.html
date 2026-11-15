@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Outpost Zero: Run a Moon Base</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<h1>🌙 Outpost Zero</h1>
+<section id="start">
+<p class="lead">You run a Moon base for <b>14 sols</b> (a sol = one day). You get <b>8 power</b> each day. Split it between keeping air clean, blocking radiation, growing plants and doing science. <b>Nothing is free!</b></p>
+<p>Pick the sky your crew will face:</p>
+<div class="btns">
+<button data-m="live">📡 Real sky: last 14 days <small>(NASA DONKI, live)</small></button>
+<button data-m="halloween2003">🎃 Halloween Storms 2003 <small>(archived)</small></button>
+<button data-m="may2024">🌌 May 2024 Superstorm <small>(archived)</small></button>
+<button data-m="random">🎲 Random sky <small>(made up, for practice)</small></button>
+</div>
+<p class="note">Radiation <b>dose</b> = how much space radiation your crew's bodies absorbed. It adds up and never goes away, so keep it under 100.</p>
+</section>
+<section id="game" hidden>
+<div class="top"><span id="sol"></span><span id="badge"></span></div>
+<div id="sky" class="card"></div>
+<div class="meters" id="meters"></div>
+<div class="card"><h3>⚡ Power: <span id="left"></span> left to spend <small id="dustnote"></small></h3><div id="ctl"></div>
+<p class="note">Faded bars show what <b>this choice</b> will do by tomorrow (the "ghost preview").</p>
+<button id="end" class="go">End Sol ▶</button></div>
+<div id="result" class="card" hidden></div>
+</section>
+<section id="over" hidden></section>
+<footer>Data: NASA DONKI (api.nasa.gov, space weather) and archived events. Science facts link to NASA OSDR. See DATA_SOURCES.md. Simplified for learning, not a flight simulator.</footer>
+</main><script src="data.js"></script><script src="game.js"></script></body></html>
